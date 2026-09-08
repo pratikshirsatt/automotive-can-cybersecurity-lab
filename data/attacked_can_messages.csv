@@ -1,0 +1,9 @@
+timestamp,can_id,ecu,data,status
+09:00:01,0x100,Engine ECU,Speed=60,NORMAL
+09:00:02,0x200,Brake ECU,Brake=OFF,NORMAL
+09:00:03,0x300,Gateway ECU,Status=NORMAL,NORMAL
+09:00:04,0x100,Engine ECU,Speed=61,NORMAL
+09:00:05,0x200,Brake ECU,Brake=OFF,NORMAL
+09:00:06,0x300,Gateway ECU,Status=NORMAL,NORMAL
+09:00:07,0x100,Engine ECU,Speed=250,NORMAL
+09:00:08,0x999,Unknown ECU,Brake=OFF,NORMAL
