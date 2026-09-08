@@ -1,49 +1,38 @@
-# Automotive CAN Security & TARA Lab
+# Automotive CAN Cybersecurity & TARA Home Lab
 
 ## Project Overview
 
-This beginner-level automotive cybersecurity lab was created to understand how Electronic Control Units (ECUs) communicate over an in-vehicle CAN network and how basic cybersecurity threats can be identified.
+This home lab was created to understand how basic vehicle ECUs communicate using CAN messages and how a cybersecurity engineer can identify suspicious CAN activity.
 
-The lab simulates Engine, Brake, and Gateway ECUs using Python and introduces basic CAN message monitoring, abnormal-message detection, and Threat Analysis and Risk Assessment (TARA).
+The project starts with a small set of normal CAN messages from an Engine ECU, Brake ECU, and Gateway ECU. I then added simulated malicious CAN messages and used a simple Python script to detect the abnormal activity. After identifying the suspicious messages, I performed a basic Threat Analysis and Risk Assessment (TARA) to understand the potential impact and recommend security controls.
 
-## Objectives
+---
 
-- Understand basic ECU architecture
-- Understand CAN communication concepts
-- Simulate CAN-style vehicle messages
-- Identify unexpected CAN messages
-- Perform a basic TARA & translate identified threats into cybersecurity requirements
+## Project Flow
 
-## Lab Architecture
+```text
+Normal CAN Messages
+        ↓
+Create CAN Baseline
+        ↓
+Add Simulated Malicious Messages
+        ↓
+Run Python Detection Script
+        ↓
+Detect Abnormal CAN Activity
+        ↓
+Investigate Finding
+        ↓
+Perform TARA
+        ↓
+Recommend Security Controls
 
 
-                    SIMULATED VEHICLE
+**## Outcome**
 
- Engine ECU --------\
-                     \
- Brake ECU ----------- CAN BUS -------- Gateway ECU
-                     /
-                    /
-             Unauthorized Actor
-                    |
-                    |
-             Injects CAN Message
-                    |
-             Manipulates Data
-                    |
-                    v
-          Python Security Monitor
-                    |
-             Abnormality Found
-                    |
-              HIGH ALERT
-                    |
-             Incident Escalation & Reporting
+The home lab successfully detected both simulated CAN anomalies:
 
-## Technologies
+- A valid CAN ID carrying an abnormal `Speed=250` value.
+- An unknown CAN ID `0x999` carrying a brake-related message.
 
-- Python
-- Visual Studio Code
-- Git/GitHub
-- CAN fundamentals
-- TARA fundamentals
+Overall, the lab demonstrated the full workflow from **normal CAN baseline → malicious message injection → automated detection → risk assessment → security recommendations**.
