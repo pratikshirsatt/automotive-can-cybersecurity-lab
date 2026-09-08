@@ -1,4 +1,4 @@
-# Automotive CAN Cybersecurity & TARA Home Lab
+# Automotive CAN Threat Detection & TARA Home Lab
 
 ## Project Overview
 
